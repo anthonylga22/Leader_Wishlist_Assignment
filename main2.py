@@ -51,15 +51,23 @@ for i in range(1, len(dataset[0])):
     curated_data.append(temp_lst)
 
 
-#print(curated_data)
-#for i in range(len(curated_data)):
+# print(curated_data)
+# for i in range(len(curated_data)):
 #    print(curated_data[i])
 
-print(curated_data[0][3])
-print("1st Option: ")
-for i in range(len(curated_data[0])):
-    if curated_data[i][3] == 1:
-        print(curated_data[i][1], end=", ")
+for k in range(len(curated_data[0]) - 3):
+    print(curated_data[0][k])
+    for i in range(1, 6) :
+        print(f"Option {i}: ", end=" ")
+        #for j in str(curated_data[0]):
+        for j in range(len(curated_data[0])):
+            if curated_data[j][k] == i:
+                print(curated_data[j][1], end=", ")
+        print("\n")
+    print("\n")
+
+
+
 
 
 
