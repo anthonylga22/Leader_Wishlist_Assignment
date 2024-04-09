@@ -16,17 +16,14 @@ def read_csv_file(file_path):
     with open(file_path, 'r') as file:
         csv_reader = csv.reader(file)
         for row in csv_reader:
-            #print(row)
-            #print("\n")
             dataset.append(row)
 
-            #return dataset
 
-file_path = 'data.csv'  ""
+file_path = 'data.csv'
 dataset_answers = read_csv_file(file_path)
 
+print(dataset)
 #Changes the column name to the trip names
-#Dataset[0]
 replace_text = "Select only 1 trip from the 1st column and only 1 trip from 2nd column."
 for i in range(len(dataset[0])):
     if replace_text in dataset[0][i]:
@@ -37,8 +34,7 @@ for i in range(len(dataset[0])):
     else: 
         curated_data[0].append(dataset[0][i])
 
-#print(curated_data)
-
+#Curates data
 for i in range(1, len(dataset[0])):
     temp_lst = []
     for j in range(len(dataset[i])):
@@ -59,7 +55,6 @@ for k in range(len(curated_data[0]) - 3):
     print(curated_data[0][k])
     for i in range(1, 6) :
         print(f"Option {i}: ", end=" ")
-        #for j in str(curated_data[0]):
         for j in range(len(curated_data[0])):
             if curated_data[j][k] == i:
                 print(curated_data[j][1], end=", ")
