@@ -46,10 +46,6 @@ for i in range(1, len(dataset)):
             pass
     curated_data.append(temp_lst)
 
-print("***************************************")
-#print(len(temp_lst))
-#print(curated_data)
-print("***************************************")
 
 # print(curated_data)
 # for i in range(len(curated_data)):
@@ -62,7 +58,7 @@ for k in range(len(curated_data[0])): #17
         print(f"Option {i}: ", end=" ")
         for j in range(len(curated_data)):
             if curated_data[j][k] == i:
-                print(curated_data[j][1], end=", ")
+                print((curated_data[j][1].split(" "))[0], end=", ")
         print("\n")
     print("\n")
 
