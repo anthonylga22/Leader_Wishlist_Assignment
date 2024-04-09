@@ -10,7 +10,6 @@ text_conversion = {
 
 dataset = []
 curated_data = [[]]
-final_list = []
 
 def read_csv_file(file_path):
     with open(file_path, 'r') as file:
@@ -52,7 +51,7 @@ for i in range(1, len(dataset)):
 #    print(curated_data[i])
 
 #Prints the trip name with the leaders
-for k in range(len(curated_data[0])): #17
+for k in range(3, len(curated_data[0])):
     print(curated_data[0][k])
     for i in range(1, 6) :
         print(f"Option {i}: ", end=" ")
@@ -61,8 +60,4 @@ for k in range(len(curated_data[0])): #17
                 print((curated_data[j][1].split(" "))[0], end=", ")
         print("\n")
     print("\n")
-
-
-
-
 
